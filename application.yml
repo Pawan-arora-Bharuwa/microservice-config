@@ -1,0 +1,98 @@
+ordersystem:
+  customerMobileNo: ''
+  cancelOrder:
+    url: http://103.231.42.140/bposAddApi/api/cancelorderproforma
+  placeorder:
+    url: http://103.231.42.140/publish/api/saveSalesOrderFromMobile
+  paymentconfirmation:
+    url: http://103.231.42.140/publish/api/saveEcommSalesOrderPayment
+  cancelOrderApiKey: i0gtdrg8mVnLWwsAawjYr4Rx-Af50DWsTh5fit
+  customerName: Fit India Pvt. Ltd.
+  address: ''
+  deleteorder:
+    url: http://103.231.42.140/publish/api/deleteEcommSalesOrderPayment
+  partyId: '988888'
+  initiateReturnRequest:
+    url: http://103.231.42.140/publish/api/orderReturnFromDeliveryApp
+  phiscalId: 21/22
+  division: AAA
+delivery:
+  charges: '30.0'
+  free:
+    inner:
+      circle:
+        minDistance: '5.0'
+        minAmount: '500.0'
+    outer:
+      circle:
+        minDistance: '10.0'
+        minAmount: '1000.0'
+    amount: '250.0'
+  chargeable:
+    additional:
+      charges: '0.0'
+    perKm:
+      charges: '5.0'
+    base:
+      charges: '50.0'
+sms:
+  template:
+    orderOutForDelivery: "OM,\r\n\r\nDear Customer, Your Order number {{ORDER_NO}}\
+      \ is out for delivery.It Will be delivered by {{DELIVERY_DATE}}.\r\nThanks OrderME."
+    orderConfirmation: "Hi {{NAME}}, Your ORDERME order {{ORDER_NO}} is confirmed!\r\
+      \nOrder Amount is Rs. {{AMOUNT}}."
+    orderCancel: Hi {{NAME}}, Your ORDERME order {{ORDER_NO}} has been cancelled.
+      It may take upto 5-7 days for your refund to be processed for prepaid orders.
+    groupOrder:
+      orderConfirmation: "Your ORDERME order {{ORDER_NO}} with {{N_PACKINGS}} packings\
+        \ is confirmed!\r\nOrder Amount is Rs. {{AMOUNT}}."
+razorPayApiKey: rzp_test_Ft2EpvTLI1vqx4
+grpc:
+  client:
+    grpc-devproblems-service:
+      address: static://localhost:9001
+      negotiationType: plaintext
+storeType:
+  mappingForItemMigration: '{''PPWH'':{''PPWH''}, ''MS'':{''MS'', ''PMS'', ''AK'',
+    ''CK''},''PMS'':{''MS'', ''PMS'', ''AK'', ''CK''}, ''AK'':{''MS'', ''PMS'', ''AK'',
+    ''CK''}, ''CK'':{''MS'', ''PMS'', ''AK'', ''CK''}}'
+callCenterApp:
+  min:
+    version: '0.12'
+payment:
+  modes:
+    nodeValue: '{MULTI:''Razor,Samridhi'',DEFAULT:''Razor'',PMS:''Razor,Samridhi'',AK:''Razor,Samridhi'',MS:''Razor,Samridhi'',CK:''Razor,Samridhi'',''Prakriti
+      Organic'':'''',PWH:''Razor,Samridhi,Wallet'',SWH:''Razor,Samridhi,Wallet'',PPWH:''Razor,Samridhi''}'
+    limit: '{COD:1000}'
+store:
+  loc:
+    distance: '7'
+  delivery:
+    charges: '{PPWH:{deliveryFreeAmount:''1000.0'',deliveryCharges:''80.0'',innerCircleMinAmount:''500.0'',innerCircleMinDist:''0.0'',outerCircleMinAmount:''1000.0'',outerCircleMinDist:''0.0'',chargeableBaseCharges:''80.0'',chargeableAdditionalCharges:''60.0'',chargeablePerKmCharges:''0''},PWH:{deliveryFreeAmount:''1000.0'',deliveryCharges:''80.0'',innerCircleMinAmount:''500.0'',innerCircleMinDist:''0.0'',outerCircleMinAmount:''1000.0'',outerCircleMinDist:''0.0'',chargeableBaseCharges:''80.0'',chargeableAdditionalCharges:''60.0'',chargeablePerKmCharges:''0''},DEFAULT:{deliveryFreeAmount:''700.0'',deliveryCharges:''50.0'',innerCircleMinAmount:''500.0'',innerCircleMinDist:''0.0'',outerCircleMinAmount:''700.0'',outerCircleMinDist:''0.0'',chargeableBaseCharges:''50.0'',chargeableAdditionalCharges:''30.0'',chargeablePerKmCharges:''0''}}'
+send:
+  error:
+    mail:
+      enabled: 'true'
+server:
+  port: '8083'
+spring:
+  application:
+    name: 'Config-Server'
+  cloud:
+    config:
+      server:
+        git:
+          uri:
+razorPaySecret: XKXvvMEhFEf94TZJ1wpncurb
+order:
+  weightLimit: '10000'
+razorPayApiKeyLive: rzp_live_9WxBmcagVIBbxs
+bpos_order_invoice_url: http://103.231.42.140/bposAddApi/api/getfitIndiaInvoicePdf
+iosApp:
+  min:
+    version: 2.1.5.16
+storesToBeExcluded: ''
+androidApp:
+  min:
+    version: 1.45-Beta(252)
+razorPaySecretLive: q3lyQSQCpobBX29SqQpZJmBm
