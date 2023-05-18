@@ -1,0 +1,28 @@
+ecom:
+    mail:
+        host: smtp.gmail.com
+        password: intellicus@123
+        port: 587
+        properties:
+            mail:
+                smtp:
+                    auth: true
+                    starttls:
+                        enable: true
+        smtp:
+            debug: true
+            fromAddress: ordermedev@gmail.com
+            fromAddressPersonal: orderme
+        subject:
+            orderCancelFailed: '[{{ORIGIN}} Error] Order No: {{ORDERNO}}  cancellation  to
+                Store: {{STOREID}} failed.'
+            orderConfirmationFailed: '[{{ORIGIN}} Error] Order No: {{ORDERNO}}  Confirmation  to
+                Store: {{STOREID}} failed - ACTION REQUIRED.'
+            orderCreationFailed: '[{{ORIGIN}} Error] Order Creation to Store: {{STOREID}}
+                failed.'
+            orderPlaceFailed: '[{{ORIGIN}} Error] Order No: {{ORDERNO}}  Placement
+                to Store: {{STOREID}} failed.'
+            orderReturnFailed: '[{{ORIGIN}} Error] Return No: {{RETURNNO}}  Return  to
+                Store: {{STOREID}} failed.'
+        toAddress: support@bharuwasolution.com
+        username: ordermedev@gmail.com
