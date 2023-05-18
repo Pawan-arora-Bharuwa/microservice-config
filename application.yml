@@ -73,16 +73,6 @@ send:
   error:
     mail:
       enabled: 'true'
-server:
-  port: '8083'
-spring:
-  application:
-    name: 'Config-Server'
-  cloud:
-    config:
-      server:
-        git:
-          uri:
 razorPaySecret: XKXvvMEhFEf94TZJ1wpncurb
 order:
   weightLimit: '10000'
