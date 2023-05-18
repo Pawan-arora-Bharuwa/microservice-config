@@ -1,3 +1,6 @@
+spring:
+    application:
+        name: Mail-Config
 ecom:
     mail:
         host: smtp.gmail.com
